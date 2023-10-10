@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 <style>
+/* 
+  *스타일링  
+*/
   *{
     margin:0;
     padding:0;
@@ -119,6 +122,7 @@
 </style>
 </head>
 <body>
+  <!-- * html 박스 -->
   <div id="root">
     <div class="container">
       <div id = "board"></div>
@@ -137,11 +141,9 @@
     </div>
   </div>
   <script>
-    
-  
+  /** 변수선언 */
   let root = document.getElementById("root")
   console.dir(root)
-  /*색상, 버튼 이벤트*/
   let hex = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
   let btn = document.getElementById("btn")
   let color = document.querySelector(".color");
@@ -151,7 +153,7 @@
   let boardtwo = document.getElementById("boardtwo")
   let btnthree = document.getElementById("btnthree")
   let boardthree = document.getElementById("boardthree")
-  
+  // 버튼 1 클릭 이벤트 // 
   btn.addEventListener("click", function(){
     let hexColor = "#"
     for (let i=0; i<6; i++) {
@@ -160,6 +162,7 @@
     color.textContent = hexColor;
     board.style.backgroundColor = hexColor;
   })
+  // 버튼 2 클릭 이벤트//
   btntwo.addEventListener("click", function(){
     let hexColortwo = "#"
     for (let i=0; i<6; i++) {
@@ -168,6 +171,7 @@
     colortwo.textContent = hexColortwo;
     boardtwo.style.backgroundColor = hexColortwo;
   })
+  // 버튼 mix 클릭 이벤트//
   btnthree.addEventListener("click", function(){
     let one = board.style.backgroundColor
     let two = boardtwo.style.backgroundColor
